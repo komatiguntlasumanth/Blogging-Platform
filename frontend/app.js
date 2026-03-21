@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://blogging-platform-6byh.onrender.com/api';
 let currentUser = null;
 let currentToken = localStorage.getItem('token') || null;
 
@@ -113,9 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('user', JSON.stringify(data.user));
             currentUser = data.user;
             currentToken = data.token;
-            
+
             if (isSignup) alert('Welcome! Your account has been created.');
-            
+
             renderNav();
             window.showView('dashboard');
         } catch (err) {
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const errorData = await res.json();
                 throw new Error(errorData.message || 'Failed to save post');
             }
-            
+
             window.closePostModal();
             fetchMyPosts();
         } catch (err) {
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    window.onerror = function(msg, url, line, col, error) {
+    window.onerror = function (msg, url, line, col, error) {
         console.error('Global Error:', msg, 'at', url, ':', line);
         if (authMessage) authMessage.innerText = 'JS Error: ' + msg;
     };
