@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentUser) {
             navLinks.innerHTML = `
                 <span>Welcome, <strong>${currentUser.name}</strong></span>
-                <button class="btn-outline" onclick="window.showView('dashboard')">Dashboard</button>
+                <button class="btn-outline" onclick="window.showView('feed')">Public View</button>
+                <button class="btn-outline" onclick="window.showView('dashboard')">My Posts</button>
                 <button class="btn-primary" onclick="window.logout()">Logout</button>
             `;
         } else {
