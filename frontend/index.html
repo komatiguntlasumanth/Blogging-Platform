@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header>
             <a href="#" class="logo" onclick="showView('feed')">Blogify</a>
             <nav id="nav-links">
-                <!-- Dynamic Links based on Auth State -->
             </nav>
         </header>
 
         <main id="main-content">
-            <!-- Dynamic Content -->
             <div id="feed-view" class="view">
                 <div id="posts-container">
-                    <!-- Posts will be loaded here -->
                 </div>
             </div>
 
@@ -58,13 +57,11 @@
                     <button class="btn-primary" onclick="openPostModal()">New Post</button>
                 </div>
                 <div id="my-posts-container">
-                    <!-- User's posts will be loaded here -->
                 </div>
             </div>
         </main>
     </div>
 
-    <!-- Modal for Create/Edit -->
     <div id="post-modal" class="modal-overlay hidden">
         <div class="modal">
             <h2 id="modal-title">Create New Post</h2>
@@ -88,4 +85,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
